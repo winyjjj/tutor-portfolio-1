@@ -1,0 +1,1037 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&family=Montserrat:wght@500&family=Raleway:wght@600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+.testimonial-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.testimonial {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.testimonial p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.testimonial cite {
+  font-style: italic;
+  font-size: 14px;
+  color: #666;
+}
+
+.nav-head {
+  display: flex;
+}
+/* hamburger button */
+.hamburger-btn {
+  display: none; /* Hide the button on larger screens */
+  background: transparent;
+  border: 0.1px solid white;
+  border-radius: 10px;
+  padding: 2px;
+  cursor: pointer;
+  margin-left: 13.8rem;
+}
+/* end */
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 2px;
+  transition: all 0.3s linear;
+  transition: all 0.4s ease-in-out;
+  
+}
+
+/* end */
+/* Media query for humbuger */
+@media only screen and (max-width: 600px) {
+  .nav-links {
+    display: none; /* Hide the navigation links on smaller screens */
+    background-color: none; /* Semi-transparent background */
+    transition: background-color 0.3s ease-in-out;
+  }
+  .hamburger-btn.active .nav-links {
+    background-color: none; /* Slightly more transparent when active */
+  }
+  .hamburger-btn {
+    display: block; /* Show the hamburger button on smaller screens */
+  }
+
+  .nav-links.show {
+    display: block; /* Show the navigation links when the button is clicked */
+    transition: all 0.5s ease;
+  }
+}
+/* END */
+/* Style the navigation bar */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c1c1c;
+  color: aliceblue;
+  padding: 15px 30px;
+}
+/* End */
+.links {
+  list-style: none; /* Remove default list styles */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Use flexbox for horizontal alignment of links */
+}
+
+.links a {
+  /*This targets the links or in other words the a tag */
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: aliceblue;
+  margin-right: 20px;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+}
+.links a:hover {
+  /* color: #e09145; */
+  /* transition: all 0.4s ease; */
+  border-bottom: 2px solid #e09145;
+}
+/* .nav-bar Media query for screens smaller than 768 pixels */
+@media only screen and (max-width: 600px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links {
+    flex-direction: column; /* Keep links horizontally aligned on smaller screens */
+  }
+
+  .links a {
+    /* margin-left: 17.2rem; */
+    margin-bottom: 3px;
+    font-size: 14px;
+    margin-top: 5px;
+    margin: 5px 10px;
+  }
+
+  .logo {
+    margin: 0 10px;
+  }
+}
+/* .material-symbols-outlined{
+    background: transparent;
+    display: none !important; 
+    color: #fff;
+     border-color: transparent; 
+} */
+/* Hamburger Menu  Media query for small screens, e.g., phones */
+/* @media only screen and (max-width: 767px) {
+    .material-symbols-outlined {
+        display: block !important; 
+    }
+    .links a {
+    display: block;
+    }
+} */
+
+.home {
+  /* note: This home is includes the whole section*/
+  /* background-color: #292c35; */
+  background-image: url(img/background-image.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 40vh;
+}
+.Home-img {
+  /* note: this class includes the image, h1 and p */
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+.profile {
+  margin-left: 0;
+  margin-top: 20px;
+}
+/* .profile {
+  margin-left: 200px;
+} */
+.Home-img img {
+  width: 350px;
+  height: 350px;
+  border-radius: 11200em;
+  margin-top: 0.1em;
+}
+
+.home-content {
+  color: aliceblue;
+  width: 50%;
+  margin-top: 2em;
+  margin-left: 20px;
+}
+.home-content > h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.home-content > a > button {
+  background: transparent;
+  border: 2px solid white;
+  padding: 1em 2em;
+  border-radius: 2em;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  margin-top: 1em;
+  color: white;
+}
+.home-content > a > button:hover {
+  background-color: #e09145;
+  transition: all 0.4s ease;
+}
+span {
+  color: #e09145;
+}
+
+/* note: Home Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .Home-img {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+    width: 100%; /* Take up full width */
+  }
+
+  .Home-img > img {
+    width: 100%; /* Take up full width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 0; /* Remove border-radius */
+    margin-top: 1em; /* Add spacing between items */
+  }
+
+  .home-content {
+    width: 80%; /* Take up full width */
+  }
+  .home-content > a > button {
+    margin-bottom: 15px;
+  }
+  .profile {
+    margin-left: 0px !important;
+    margin-top: 20px;
+  }
+}
+.skill-set {
+  /* margin-bottom: 440px; */
+  color:blue;
+  text-align: center;
+  /* display: none; */
+  /* margin-bottom: 100px; */
+  margin-top: 30px;
+}
+/* Underline style starts here */
+.underline {
+  display: block;
+  width: 7%;
+  height: 4px;
+  background-color: #e09145;
+  margin-left: 24rem;
+}
+
+/* note: Media query for Ipad */
+/* Home Media query for smaller screens */
+@media only screen and (max-width: 900px) and (max-width: 600px) {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .Home-img {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+    width: 100%; /* Take up full width */
+  }
+
+  .Home-img > img {
+    width: 100%; /* Take up full width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 0; /* Remove border-radius */
+    margin-top: 1em; /* Add spacing between items */
+  }
+
+  .home-content {
+    width: 80%; /* Take up full width */
+  }
+  .home-content > a > button {
+    margin-bottom: 15px;
+  }
+  .profile {
+    margin-left: 0px !important;
+    margin-top: 20px;
+  }
+}
+.skill-set {
+  /* margin-bottom: 440px; */
+  color: blue;
+  text-align: center;
+  /* display: none; */
+  /* margin-bottom: 100px; */
+  margin-top: 30px;
+}
+/* Underline style starts here */
+.underline {
+  display: none;
+  width: 7%;
+  height: 4px;
+  background-color: #e74d06;
+  margin-left: 24rem;
+}
+/* underline style ends here */
+
+/* note: underline media query for big screens */
+@media screen and (max-width: 800px) {
+  .underline {
+    
+    width: 3.5%;
+    margin-left: 24rem; 
+  }
+}
+/* end  */
+
+/* note: underline media query for small screens* */
+@media screen and (max-width: 600px) {
+  .underline {
+    right: 15%;
+    width: 15%;
+    margin-left: 10.2rem !important;
+    display: block;
+  }
+}
+/* End */
+
+#skills {
+  background-color: white;
+  color: white;
+  padding: 40px;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+}
+
+.skill-card {
+  margin: 0 20px 20px 20px;
+  width: 300px;
+  /* border: 1px solid #e09145; */
+  padding: 20px;
+  background: #1c1c1c;
+  box-shadow: 0 4px 8px rgba(243, 234, 234, 0.3);
+  /* border-radius: 20px; */
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+.skill-card:hover {
+  background-color: #40444f; /* Change to the desired color on hover */
+}
+.skill-card img {
+  width: 30px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px; /* Add spacing between the image and text */
+  border: 1px solid white;
+  padding: 5px;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1em;
+}
+/* Ability CSS */
+
+.skills_section{
+    width: 100%;
+    /* height: 100vh; */
+    padding: 5%;
+    background-color: rgba(0, 0, 0, 0.082);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width:100vw;
+    margin: 0 auto;
+}
+.skills_head{
+    width: 100%;
+    margin-bottom: 100px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+.education-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.education {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.education h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.education p {
+  font-size: 16px;
+  color: #666;
+}
+/* Style for the education section */
+#education {
+  padding: 40px 0;
+  background-color: #f9f9f9;
+}
+
+/* Style for the education container */
+.education-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Style for individual education entries */
+.education {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Style for education entry headings */
+.education h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Style for education entry details */
+.education p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+
+.skills_head h2{
+    font-size: 30px;
+    /* margin-bottom: -5px; */
+}
+.skills_head h2 span{
+    color: #e09145;
+}
+.skills_main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 50px;
+    /* margin-bottom: 10rem; */
+}
+.skills_main .skill_bar .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  0 10px;
+}
+.skill_bar .info p:nth-child(2){
+    font-weight: 500;
+}
+.skill_bar .bar{
+    width: 100%;
+    height: 10px;
+    background-color: #f8f8f8;
+    border-radius: 25px;
+    margin-top: 5px;
+    position: relative;
+}
+.skill_bar .bar span{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: #1c1c1c;
+    border-radius: 25px;
+}
+.skill_bar .bar .html{
+    width: 90%;
+    animation: html 2s;
+}
+@keyframes html {
+    0%{
+        width: 0%;
+    }100%{
+        width: 90%;
+    }
+}
+.skill_bar .bar .css{
+    width: 85%;
+    animation: css 2s;
+}
+@keyframes css {
+    0%{
+        width: 0%;
+    }100%{
+        width: 85%;
+    }
+}
+.skill_bar .bar .sass{
+    width: 80%;
+    animation: sass 2s;
+}
+@keyframes sass {
+    0%{
+        width: 0%;
+    }100%{
+        width: 80%;
+    }
+}
+.skill_bar .bar .js{
+    width: 80%;
+    animation: css 2s;
+}
+@keyframes js {
+    0%{
+        width: 0%;
+    }100%{
+        width: 80%;
+    }
+}
+.skill_bar .bar .react{
+    width: 75%;
+    animation: react 2s;
+}
+@keyframes react {
+    0%{
+        width: 0%;
+    }100%{
+        width: 75%;
+    }
+}
+.skill_bar .bar .node{
+    width: 70%;
+    animation: node 2s;
+}
+@keyframes node {
+    0%{
+        width: 0%;
+    }100%{
+        width: 70%;
+    }
+}
+.skill_bar .bar .express{
+    width: 65%;
+    animation: express 2s;
+}
+@keyframes express {
+    0%{
+        width: 0%;
+    }100%{
+        width: 65%;
+    }
+}
+.skill_bar .bar .mongo{
+    width: 60%;
+    animation: mongo 2s;
+}
+@keyframes mongo {
+    0%{
+        width: 0%;
+    }100%{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 600px) {
+  .skills_section{
+   
+    flex-direction: column;
+    
+}
+}
+/* .ability {
+  padding: 0.5rem;
+background-color: #1c1c1c;
+width: 30vw;
+margin: 0 auto;
+margin-bottom: 2rem; */
+/* border-radius: 30px; */
+/* font-size: 10px; */
+/* }
+.ability:hover {
+  background-color: #40444f;
+}
+
+
+.ability-content {
+  display: flex;
+  justify-content: space-between;
+  color:white
+ 
+} */
+/* END */
+.education-heading {
+  text-align: center;
+}
+.education-heading {
+  text-align: center;
+  margin-top: 30px;
+
+}
+@media screen and (max-width: 600px) {
+  .ability {
+    width: 90vw;
+  }
+}
+.education {
+  display: flex;
+  /* justify-content: space-between; */
+  /* margin: 20px 0; */
+  padding: 20px; /* Adjust padding for spacing */
+  width: 65vw;
+  margin: 0 auto;
+}
+
+.education-content {
+  flex: 1;
+  margin-right: 20px; /* Adjust the right margin for spacing */
+}
+
+.education-text {
+  flex: 2;
+
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+  .education {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items */
+    width: 100vw;
+    font-size: 0.9rem;
+   
+  }
+
+  .education-content,
+  .education-text {
+    margin-right: 0; /* Reset the right margin for smaller screens */
+    width: 100%; /* Take full width on smaller screens */
+    text-align: center;
+    
+    
+  }
+  .education-text h1 {
+  font-size: 1.5rem;
+  }
+}
+
+
+/* note: skill Media query for smaller screens */
+@media screen and (max-width: 600px) {
+  #skills {
+    flex-direction: column; /* Stack the cards on top of each other */
+    align-items: center;
+  }
+  /* end */
+
+  .skill-card {
+    width: 100%; /* Take full width on smaller screens */
+  }
+}
+
+/* note: My interest style */
+.my-intrests {
+  text-align: center;
+  padding: 80px 0;
+  background-color: #f8f8f8; /* Set your desired background color */
+  margin-top: 50px;
+}
+
+.my-intrests h1 {
+  font-size: 2em;
+  color: #333; /* Set your desired text color */
+}
+
+.my-intrests-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.my-intrests-icons div {
+  margin: 0 20px;
+}
+
+.my-intrests-icons img {
+  width: 50px; /* Set your desired image width */
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(251, 249, 249, 0.1); /* Add a subtle box shadow */
+  border: 1px solid black;
+  padding: 10px;
+}
+/* End */
+
+/* My projects 
+.text {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  font-size: 30px;
+}
+
+.text {
+  font-size: 24px; 
+}
+
+
+.services {
+  background-color: #292c35;
+  padding: 20px; */
+
+/* Style the card container 
+.our-services {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}*/
+/* My projects ends here */
+
+/* About starts from here */
+.about {
+  background-color: #1c1c1c;
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.my-name {
+  color: white;
+  margin-top: 20px;
+}
+/* style for the button on the about section */
+.explore button {
+  padding: 10px 15px;
+  margin-top: 20px !important;
+  border-radius: 30px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+/* End */
+.explore button:hover {
+  background-color: #e09145;
+  transition: all 0.4s ease;
+}
+.about-text {
+  max-width: 600px; /* Adjust the maximum width of the text container */
+  margin-left: 200px;
+  margin-top: 10px;
+}
+
+.about h1 {
+  color: white; /* Set the color of the heading */
+  margin-bottom: 20px;
+}
+
+.about p {
+  color: white; /* Set the color of the paragraph text */
+  letter-spacing: 0.5px;
+  
+}
+
+.about-img img {
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  border-radius: 8px; /* Add border-radius for rounded corners if desired */
+  width: 300px;
+  margin-right: 300px;
+}
+/* About ends here */
+
+/* About Media query for small screens, e.g., phones */
+@media only screen and (max-width: 600px) {
+  .about {
+    flex-direction: column; /* Adjust the layout for small screens */
+    align-items: center; /* Center align items for small screens */
+    padding: 20px; /* Adjust padding for small screens */
+  }
+
+  .about img {
+    height: auto; /* Allow the image to resize proportionally */
+    max-width: 100%; /* Ensure the image doesn't overflow its container */
+    margin-top: 20px; /* Add space between image and text on small screens */
+    margin-right: 0;
+  }
+
+  .about-text {
+    margin-left: 0; /* Reset margin for small screens */
+    text-align: center; /* Center align text for small screens */
+    font-size: 0.9rem;
+    
+  }
+}
+
+/* Style the title in each card */
+.title {
+  color: #333;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* Style the content in each card */
+.content {
+  color: #666;
+  font-size: 1em;
+}
+
+/* form */
+.container {
+  /* This container includes the h1, p tag and form */
+  display: flex;
+  margin-top: 50px;
+  width: 95vw;
+  margin: 0 auto;
+}
+.column > h2 {
+  font-size: 16px;
+  /* margin-left: 400px; */
+}
+.column > p {
+  font-size: 30px;
+  font-weight: bold;
+  /* margin-left: 400px; */
+}
+
+/* Responsive styles: Adjust the layout for smaller screens.This is for the column and h1 and p tag */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+/* 
+  .column > h2, */
+  /* .column > p { */
+    /* margin-left: 0; */
+  /* } */
+
+  /* Add any additional styles for smaller screens here */
+}
+
+.column {
+  /* background-color: #e09145; */
+  flex: 1;
+  padding: 10px;
+  border: 1px solid white;
+}
+/*.column {
+    max-width: 550px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 500px;
+   
+}*/
+
+form {
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+label {
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input {
+  margin-bottom: 12px;
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+/* Existing CSS styles */
+
+textarea {
+  margin-bottom: 12px;
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  resize: vertical; /* Allow vertical resizing of the textarea */
+  min-height: 100px; /* Set a minimum height to avoid the textarea collapsing */
+}
+
+input[type="submit"] {
+  background: transparent;
+  color: #292c35;
+  cursor: pointer;
+}
+.small-button {
+  width: 100px; /* Adjust the width as needed */
+  padding: 10px 15px; /* Adjust the padding as needed */
+  font-size: 18px;
+  border-radius: 30px;
+  margin-top: -15px;
+  border: 2px solid black;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+.small-button:hover {
+  background-color: #292c35;
+  color: white;
+  border: 2px solid white;
+}
+/* input[type="submit"]:hover {
+  background-color: #e09145;
+} */
+/* End */
+
+/* Footer */
+.footer {
+  display: flex;
+  background-color: #1c1c1c;
+  padding: 50px 15%;
+  color: white;
+}
+.footer div {
+  text-align: center;
+}
+.col-2 {
+  flex-grow: 2;
+}
+.footer div h3 {
+  font-weight: 300;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+.col-1 a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  margin-top: 10px;
+}
+.col-1 a:hover {
+  color: #e09145;
+  transition: all 0.5s ease;
+}
+.footer-2 input {
+  width: 400px;
+  height: 45px;
+  border-radius: 30px;
+  text-align: center;
+
+  margin-top: 20px;
+  margin-bottom: 40px;
+  outline: none;
+  border: none;
+}
+.footer-2 button {
+  padding: 10px 30px;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 30px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+.social-icons {
+  margin-top: 10px;
+}
+.social-icons a {
+  font-size: 22px;
+  /* margin: 10px; */
+  cursor: pointer;
+  color: white;
+}
+
+/* Media Query for Small Screens */
+@media screen and (max-width: 600px) {
+  .footer {
+    padding: 30px 5%; /* Adjust padding for smaller screens */
+    flex-direction: column;
+  }
+  .footer-2 input {
+    width: 200px;
+    margin-top: 3px;
+  }
+  .footer div h3 {
+    font-weight: 300;
+    margin-bottom: 1px;
+    letter-spacing: 1px;
+    /* margin-top: 1px; */
+  }
+  .footer-2 button {
+    margin-bottom: 30px;
+  }
+  .col-1 {
+    margin-bottom: 30px;
+  }
+  .col-1 a {
+    background-color: none;
+  }
+  .col-1 a:hover {
+    color: #e09145;
+    transition: all 0.5s ease;
+  }
+  .social-icons a {
+    margin: 10px;
+    font-size: 15px;
+  }
+}
+/* COPYRIGHT */
+.Copyright {
+  background-color: #f8f8f8;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+}
+/* END */
